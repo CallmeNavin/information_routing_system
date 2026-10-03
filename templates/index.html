@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Information Routing System</title>
+</head>
+<body>
+    <h1>Information Routing System</h1>
+    <p>Submit new information</p>
+    <form action="/submit" method="POST"> <!-- Form để user nhập & submit dữ liệu -->
+        <label>Title:</label>
+        <input type="text" name="title"> <!-- name="title": Khi submit form, dữ liệu trong ô này mang tên title -->
+        <br><br> <!-- xuống dòng trong HTML -->
+        <label>Description:</label>
+        <textarea name="description"></textarea>
+        <br><br>
+        <label>Information Type:</label>
+        <select name="info_type"> <!-- <select> = tạo ô dropdown + khi submit, dữ liệu của dropdown này sẽ mang tên info_type-->
+            <option value="Incident">Incident</option> <!-- <option> = một lựa chọn trong dropdown. value="Incident": giá trị thực sự được gửi về backend còn >Incident< là chữ user nhìn thấy trên màn hình -->
+            <option value="Decision">Decision</option>
+            <option value="Announcement">Announcement</option>
+            <option value="Request">Request</option>
+        </select>
+        <br><br>
+        <label>Area:</label>
+        <input type="text" name="area">
+        <br><br>
+        <label>Severity:</label>
+        <select name="severity">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Critical">Critical</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
