@@ -9,56 +9,124 @@
     button,
     p,
     label,
-    form {
-        font: inherit;
-    }
+    form {font: inherit;}
     .info-icon {
         cursor: pointer;
-        position: relative;
-    }
+        position: relative;}
     .tooltip {
-    display: none;
-    position: absolute;
-    background: white;
-    top: 100%;
-    left: 20px;
-    width: 300px;
-    font-size: 14px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    line-height: 1.5;
-    }
+        display: none;
+        position: absolute;
+        background: white;
+        top: 100%;
+        left: 20px;
+        width: 300px;
+        font-size: 14px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        line-height: 1.5;}
     .info-icon:hover .tooltip {
-    display: inline;
-    }
+        display: inline;}
     .form-card {
-    background: white;
-    width: 700px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin: 0 auto;}
+        background: white;
+        width: 700px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        margin: 40px auto 0;}
     body {
-    background: #f5f7fa;}
+        background: #f5f7fa;
+        font-family: Arial, sans-serif;}
     h1 {
-    text-align: center;
-    color: #17365d;}
+        text-align: center;
+        color: #17365d;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-family: Georgia, serif;}
     h2 {
-    color: #17365d;
-    margin-top: 0;}
+        color: #17365d;
+        margin-top: 0;}
     .form-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;}
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;}
     .form-row label {
-    width: 160px;}
+        flex: 0 0 160px;}
+    .form-row input,
+    .form-row textarea,
+    .form-row select {
+        flex: 1;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 12px 14px;
+        border: 1px solid #cbd2dc;
+        border-radius: 6px;}
+    .tagline {
+        text-align: center;
+        color: #667c98;
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-top: 0;
+        margin-bottom: 30px;}
+    .tagline::after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 2px;
+        background: #c6a86b;
+        margin: 14px auto 0;}
+    .submit-button {
+        background: #17365d;
+        color: white;
+        border: none;
+        padding: 14px 28px;
+        cursor: pointer;}
+    .submit-button:hover {
+        background: #244e80;}
+    .form-row input:focus,
+    .form-row textarea:focus,
+    .form-row select:focus {
+        outline: none;
+        border-color: #17365d;
+        box-shadow: 0 0 0 3px rgba(23, 54, 93, 0.12);}
+    .page-header {
+        transform: translateY(30px);}
+    .form-description {
+        color: #718096;
+        font-size: 14px;
+        margin-top: -5px;
+        margin-bottom: 30px;}
+    body::before,
+    body::after {
+        content: "";
+        position: fixed;
+        top: 32%;
+        width: 260px;
+        height: 260px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 300'%3E%3Cg fill='none' stroke='%2317365d' stroke-width='1.3'%3E%3Cpath d='M10 40 L80 15 L150 45 L220 20 M80 15 L110 95 L150 45 L230 110 M10 40 L35 135 L110 95 L185 165 L230 110 M35 135 L15 225 L95 260 L185 165 L245 240 M110 95 L95 260 M185 165 L245 240 L210 290 L95 260'/%3E%3C/g%3E%3Cg fill='%2317365d'%3E%3Ccircle cx='10' cy='40' r='4'/%3E%3Ccircle cx='80' cy='15' r='4'/%3E%3Ccircle cx='150' cy='45' r='4'/%3E%3Ccircle cx='220' cy='20' r='4'/%3E%3Ccircle cx='110' cy='95' r='4'/%3E%3Ccircle cx='230' cy='110' r='4'/%3E%3Ccircle cx='35' cy='135' r='4'/%3E%3Ccircle cx='185' cy='165' r='4'/%3E%3Ccircle cx='15' cy='225' r='4'/%3E%3Ccircle cx='95' cy='260' r='4'/%3E%3Ccircle cx='245' cy='240' r='4'/%3E%3Ccircle cx='210' cy='290' r='4'/%3E%3C/g%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.18;
+        pointer-events: none;}
+    body::before {
+        left: 3%;}
+    body::after {
+        right: 3%;
+        transform: scaleX(-1);}
+    body::before,
+    body::after {
+        width: 280px;
+        height: 320px;} /* Giữ nguyên các thuộc tính khác */
 </style> <!-- Để chỉnh toàn bộ cùng 1 font (cả bộ thiết lập font: size, weight... thay vì chỉ font family (kiểu font chữ)) -->
 <body>
-    <h1>Information Routing System</h1>
+    <div class="page-header">
+        <h1>Information Routing System</h1>
+        <p class="tagline"> EVERY SIGNAL MATTERS!</p>
+    </div>
     <div class="form-card">
         <h2>Submit new information</h2>
+        <p class="form-description"> Share important information so it reaches the right people </p>
         <form action="/submit" method="POST"> <!-- Form để user nhập & submit dữ liệu -->
             <div class="form-row">
                 <label>Title:</label>
@@ -72,13 +140,18 @@
                 <label>Information Type:
                     <span class="info-icon"> ⓘ
                         <span class="tooltip"> 
-                            Select the type based on the business meaning of the information.<br>
-                            <strong>Incident</strong>: Something went wrong.<br>
-                            <strong>Change</strong>: Something relevant changed.<br>
-                            <strong>Request</strong>: Someone needs an action or deliverable.<br>
-                            <strong>Proposal</strong>: Something is suggested for consideration.<br>
-                            <strong>Decision</strong>: Something has been formally decided.<br>
-                            <strong>Announcement</strong>: Information is provided primarily for awareness.
+                            Select the type based on the business meaning of the information<br>
+                            <strong>Incident</strong>: Something went wrong<br>
+                            <strong>Change</strong>: Something relevant changed<br>
+                            <strong>Request</strong>: Someone needs an action or deliverable<br>
+                            <strong>Proposal</strong>: Something is suggested for consideration<br>
+                            <strong>Decision</strong>: Something has been formally decided<br>
+                            <strong>Announcement</strong>: Information is provided primarily for awareness<br>
+                            <a href="https://github.com/CallmeNavin/information_routing_system#1-information-type-matrix"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                                View Severity Matrix ↗
+                            </a>
                         </span>
                     </span>
                 </label>
@@ -105,6 +178,11 @@
                             <strong>Medium</strong>: Moderate impact<br>
                             <strong>High</strong>: Significant impact<br>
                             <strong>Critical</strong>: Severe impact<br>
+                            <a href="https://github.com/CallmeNavin/information_routing_system#2-severity-classification-matrix-v1"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                                View Severity Matrix ↗
+                            </a> <!-- <a>: tạo hyperlink, href: địa chỉ cần mở khi click, target="_blank": mở tab mới, không làm mất trang đang nhập form. rel="noopener noreferrer": tránh cơ chế website được mở ở tab mới có thể truy cập tab đã mở nó thông qua window.opener -> Hạn chế tiết lộ trang nguồn -->
                         </span>
                     </span>
                 </label>
@@ -114,12 +192,9 @@
                     <option value="Medium">Medium</option>
                     <option value="High">High</option>
                     <option value="Critical">Critical</option>
-                            <strong>Announcement</strong>: Information is provided primarily for awareness.
-                        </span>
-                    </span>
                 </select>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="submit-button">Submit Information →</button>
         </form>
     </div>
 </body>
