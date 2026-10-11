@@ -69,7 +69,7 @@
                 <textarea name="description" required></textarea>
             </div>
             <div class="form-row">
-                <label>Information Type: 
+                <label>Information Type:
                     <span class="info-icon"> ⓘ
                         <span class="tooltip"> 
                             Select the type based on the business meaning of the information.<br>
@@ -97,13 +97,26 @@
                 <input type="text" name="area" required>
             </div>
             <div class="form-row">
-                <label>Severity:</label>
+                <label>Severity:
+                    <span class="info-icon"> ⓘ
+                        <span class="tooltip"> 
+                            Select the severity based on impact of the information<br>
+                            <strong>Low</strong>: Minimal impact<br>
+                            <strong>Medium</strong>: Moderate impact<br>
+                            <strong>High</strong>: Significant impact<br>
+                            <strong>Critical</strong>: Severe impact<br>
+                        </span>
+                    </span>
+                </label>
                 <select name="severity" required>
                     <option value="" disabled selected>Select Severity</option>
                     <option value="Low">Low</option>
                     <option value="Medium">Medium</option>
                     <option value="High">High</option>
                     <option value="Critical">Critical</option>
+                            <strong>Announcement</strong>: Information is provided primarily for awareness.
+                        </span>
+                    </span>
                 </select>
             </div>
             <button type="submit">Submit</button>
